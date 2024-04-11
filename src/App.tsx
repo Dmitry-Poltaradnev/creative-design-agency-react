@@ -7,6 +7,7 @@ function App() {
         <div className="App">
             <h1>Hello</h1>
             <h2>Welcom</h2>
+            <h3>Pal</h3>
             <Title>Welcome to IT-INCUBATOR</Title>
         </div>
     );
