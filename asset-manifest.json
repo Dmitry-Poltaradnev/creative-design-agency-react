@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/creative-design-agency-react/static/css/main.e6c13ad2.css",
-    "main.js": "/creative-design-agency-react/static/js/main.2362b276.js",
+    "main.js": "/creative-design-agency-react/static/js/main.a1288a6f.js",
     "static/js/787.25eaef86.chunk.js": "/creative-design-agency-react/static/js/787.25eaef86.chunk.js",
     "index.html": "/creative-design-agency-react/index.html",
     "main.e6c13ad2.css.map": "/creative-design-agency-react/static/css/main.e6c13ad2.css.map",
-    "main.2362b276.js.map": "/creative-design-agency-react/static/js/main.2362b276.js.map",
+    "main.a1288a6f.js.map": "/creative-design-agency-react/static/js/main.a1288a6f.js.map",
     "787.25eaef86.chunk.js.map": "/creative-design-agency-react/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2362b276.js"
+    "static/js/main.a1288a6f.js"
   ]
 }
