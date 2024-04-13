@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
 import {Menu} from "../../components/menu/Menu";
+import {LogoLink} from "../../components/LogoLink";
 
 export const Header = () => {
     return (
         <StyledHeader>
-            <a href="#"><span>Creatic</span>CREATIVE AGENCY</a>
+            <LogoLink/>
             <Menu/>
         </StyledHeader>
     );

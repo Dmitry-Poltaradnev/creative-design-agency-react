@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;        
         font-weight: 400;
         line-height: 1.2;
-        background-color: black;
+        //background-color: black;
     } 
     a {
         text-decoration: none;
