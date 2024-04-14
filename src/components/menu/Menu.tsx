@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
+
 export const Menu = () => {
     return (
         <StyledMenu>
@@ -19,6 +20,6 @@ export const Menu = () => {
 const StyledMenu = styled.nav`
     ul{
         display: flex;
-        gap: 53px;        
+        gap: 53px;       
     }
 `

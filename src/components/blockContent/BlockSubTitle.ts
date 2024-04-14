@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type BlockSubTitlePropsType = {
     fontSize?: string,
@@ -10,6 +11,6 @@ export const BlockSubTitle = styled.p<BlockSubTitlePropsType>`
     letter-spacing: ${props => props.letterSpacing || '0' };
     text-transform: capitalize;
     span {
-        color: rgba(109, 149, 252);
+        color: ${theme.colors.accent};
     }
 `
