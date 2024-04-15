@@ -1,60 +1,65 @@
 import React from 'react';
 import mainImg from '../../../assets/img/mainPhoto.webp'
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";
 import {BlockTitle} from "../../../components/blockContent/BlockTitle";
 import {BlockInfo} from "../../../components/blockContent/BlockInfo";
 import {LinkBtn} from "../../../components/blockContent/LinkBtn";
-import {Contact} from "../contacts/contact/Contact";
 import {Container} from "../../../components/Container";
+import {BlockLine} from "../../../components/blockContent/BlockLine";
+import {theme} from "../../../styles/Theme";
 
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper  justify={'space-between'}>
-                    <div>
+                    <MainInfoWrapper>
                         <BlockTitle>Welcome to creatic</BlockTitle>
-                        <BlockSubTitle>WE ARE <span>CREATIVE</span> DESIGN AGENCY</BlockSubTitle>
+                        <BlockSubTitle letterSpacing={'1.2px'} fontSize={'80px'}>WE ARE <span>CREATIVE</span> DESIGN AGENCY</BlockSubTitle>
+                        <BlockLine backColor={theme.colors.accent} width={'144px'}/>
                         <BlockInfo>Lorem ipsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                             consectetur, adipisci
                             velit
                             Neque porro elit Neque porro quis ipsum</BlockInfo>
                         <LinkBtn>GET IN TOUCH</LinkBtn>
-                    </div>
-                    <ImageWrapper>
-                        <Photo src={mainImg} alt="mainImg"/>
-                       <Wra></Wra>
-                    </ImageWrapper>
-                </FlexWrapper>
+                    </MainInfoWrapper>
             </Container>
         </StyledMain>
     );
 };
 
-const Photo = styled.img`
-    width: 1250px;
-    height: 787px;
-   
-   
-`
-const StyledMain = styled.div`
-   /* background: linear-gradient(-82.82deg, rgba(109, 149, 252, 0.67) -53.756%, rgba(109, 149, 252, 0) 29.836%);*/
-    position: relative;
-    
-`
-const ImageWrapper = styled.div`
-    position: relative;
-`
-const Wra = styled.div`
-     background: linear-gradient(-82.82deg, rgba(109, 149, 252, 0.67) -53.756%, rgba(109, 149, 252, 0) 29.836%);
-    position: absolute;
-    z-index: 100;
-    width: 1000px;
-    height: 1000px;
-    right: 0;
-    bottom: 0;
 
+const StyledMain = styled.div`   
+    position: relative;
+    &:after {
+        content: '';
+        background: linear-gradient(-82.82deg, rgba(109, 149, 252, 0.67) -53.756%, rgba(109, 149, 252, 0) 29.836%);
+        position: absolute;
+        z-index: 1;
+        width: 140%;
+        height: 100%;       
+        right: 0;
+        bottom: 0;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        background-image: url("${mainImg}") ;
+        background-repeat: no-repeat;
+        width: 1100px;
+        height: 787px;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+    }
 `
+const MainInfoWrapper = styled.section`
+    flex-direction: column;
+    display: flex;
+    gap: 46px;
+    max-width: 730px;
+    margin: 190px 0;
+    position: relative;  
+`
+

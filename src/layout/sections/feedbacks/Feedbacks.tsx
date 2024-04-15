@@ -3,31 +3,63 @@ import styled from "styled-components";
 import feedBackFirstImg from '../../../assets/img/feedbackSection1.webp'
 import feedBackSecondImg from '../../../assets/img/feedbackSection2.webp'
 import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {BlockTitle} from "../../../components/blockContent/BlockTitle";
 import {FeedBack} from "./feedback/FeedBack";
+import {Container} from "../../../components/Container";
+import {BlockLine} from "../../../components/blockContent/BlockLine";
+import {theme} from "../../../styles/Theme";
+import {LinkBtn} from "../../../components/blockContent/LinkBtn";
 
 export const Feedbacks = () => {
     return (
         <StyledFeedbacks>
-            <FlexWrapper>
-                <Photo src={feedBackFirstImg} alt='feedBackImg'/>
-                <FlexWrapper align={'center'}
-                             direction={'column'} justify={'center'}>
-                    <BlockSubTitle>WHAT <span>our</span> CLIENTS SAY?</BlockSubTitle>
-                    <BlockTitle>TESTIMONIALS</BlockTitle>
+            <Container>
+                <FeedBackWrapper>
+                    <FeedBackTitle>WHAT <span>our</span> CLIENTS SAY?</FeedBackTitle>
+                    <BlockLine width={'218px'} backColor={theme.colors.accent}/>
+                    <BlockTitle color={theme.colors.font}>TESTIMONIALS</BlockTitle>
                     <FeedBack/>
-                </FlexWrapper>
-                <Photo src={feedBackSecondImg} alt='feedBackImg'/>
-            </FlexWrapper>
-
+                    <LinkBtn widthLink={'300px'} >VIEW ALL TESTIMONIALS </LinkBtn>
+                </FeedBackWrapper>
+            </Container>
         </StyledFeedbacks>
     );
 };
 
-const StyledFeedbacks = styled.div`
+const FeedBackTitle = styled.h2`
+
 `
-const Photo = styled.img`
-    width: 652px;
-    height: 932px;
+
+const FeedBackWrapper = styled.div`    
+    padding: 100px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;    
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-image: url("${feedBackFirstImg}");
+        width: 652px;
+        height: 932px;
+        left: -320px;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-image: url("${feedBackSecondImg}");
+        width: 652px;
+        height: 932px;
+        right: -300px;
+        top: 0;
+        z-index: -1;
+    }
+`
+
+const StyledFeedbacks = styled.div`
 `

@@ -6,29 +6,65 @@ import {BlockTitle} from "../../../components/blockContent/BlockTitle";
 import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";
 import {BlockInfo} from "../../../components/blockContent/BlockInfo";
 import {LinkBtn} from "../../../components/blockContent/LinkBtn";
+import {BlockLine} from "../../../components/blockContent/BlockLine";
+import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const About = () => {
     return (
         <StyledAbout>
-            <FlexWrapper align={'center'} justify={'space-between'} direction={'row-reverse'}>
-                <div>
-                    <BlockTitle>ABOUT US</BlockTitle>
-                    <BlockSubTitle>We Bring <span>Creative</span> ideas to life.</BlockSubTitle>
-                    <span>We love Creating</span>
-                    <BlockInfo>Lorem ipsumNeque porro quisquam est qui do lorem ipsum quia dolor sit amet,  Neque porro elit NeDque porro  Lorem ipsum Neque porro Neque porro
-                        Neque porro quisquam est qui do lorem ipsum quia dolor sit amet,  Lorem ipsum Neque quis ipsum </BlockInfo>
-                    <LinkBtn>READ MORE</LinkBtn>
-                </div>
-                <Photo src={aboutImg} alt='aboutImg'/>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper justify={'end'}>
+                    <AboutInfoWrapper>
+                        <BlockTitle>ABOUT US</BlockTitle>
+                        <BlockSubTitle lineHeight={'1.2'} letterSpacing={'0.1px'}>We Bring <span>Creative</span> ideas to
+                            life.</BlockSubTitle>
+                        <BlockLine/>
+                        <h4>We love Creating</h4>
+                        <BlockInfo>Lorem ipsumNeque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque
+                            porro
+                            elit NeDque porro Lorem ipsum Neque porro Neque porro</BlockInfo>
+                        <BlockInfo>
+                            Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Lorem ipsum Neque quis
+                            ipsum
+                        </BlockInfo>
+                        <LinkBtn>READ MORE</LinkBtn>
+                    </AboutInfoWrapper>
+                </FlexWrapper>
+            </Container>
         </StyledAbout>
     );
 };
 
-const StyledAbout = styled.div`
-    background: linear-gradient(142.13deg, rgba(109, 149, 252, 0.26) 5.652%, rgba(109, 149, 252, 0) 62.965%);
+const AboutInfoWrapper = styled.div`
+    flex-direction: column;
+    display: flex;
+    gap: 35px;
+    max-width: 660px;
+    margin: 190px 0;
+    position: relative;
+
+    h4 {
+        color: ${theme.colors.accent};
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+    }
 `
-const Photo = styled.img`
-    width: 863px;
-    height: 806px;
+
+const StyledAbout = styled.section`
+    background: linear-gradient(142.13deg, rgba(109, 149, 252, 0.26) 5.652%, rgba(109, 149, 252, 0) 62.965%);
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background-image: url("${aboutImg}");
+        background-repeat: no-repeat;
+        width: 863px;
+        height: 806px;
+        left: 90px;
+        z-index: -1;
+        bottom: 150px;
+    }
 `

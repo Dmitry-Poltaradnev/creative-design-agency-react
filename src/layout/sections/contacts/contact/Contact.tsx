@@ -1,21 +1,32 @@
 import React from 'react';
 import styled from "styled-components";
-import icons from "../../../../assets/img/icons-sprite.svg";
+import {Icon} from "../../../../components/icon/Icon";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 export const Contact = () => {
     return (
-        <div>
-            <svg width="50" height="50">
-                <use xlinkHref={`${icons}#map`}/>
-            </svg>
-            <ContactTitle>Office Address</ContactTitle>
-            <ContactLink>98, Arca St, PR City, 33414 , Indonesia</ContactLink>
-        </div>
+        <StyledContact>
+            <FlexWrapper gap={'30px'} align={'center'}>
+                <Icon width={'32px'} height={'45px'} viewBox={'0 0 30px 30px'} iconId={'map'}/>
+                <FlexWrapper direction={'column'} >
+                    <ContactTitle>Office Address</ContactTitle>
+                    <ContactLink>98, Arca St, PR City, 33414 , Indonesia</ContactLink>
+                </FlexWrapper>
+            </FlexWrapper>
+        </StyledContact>
     );
 };
 
 const ContactTitle = styled.p`
-
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.6;
 `
 const ContactLink = styled.a`
+color: ${theme.colors.accent};
+`
+
+
+const StyledContact = styled.div`
 `

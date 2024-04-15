@@ -22,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.font};
         letter-spacing: 1px;
+        font-size: 21px;
     } 
     a {
         text-decoration: none;
