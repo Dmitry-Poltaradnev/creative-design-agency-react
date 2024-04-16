@@ -20,7 +20,10 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
 const StyledHeaderMenu = styled.nav`
     ul {
         display: flex;
-        gap: 50px;
+        gap: 30px;
+    }
+    @media ${theme.media.tablet}{
+        display: none;
     }
 `
 const ListItem = styled.li`

@@ -38,7 +38,7 @@ export const Experience = () => {
     );
 };
 
-const StyledExperience = styled.div`
+const StyledExperience = styled.section`
     padding: 190px 0;
     background: linear-gradient(12.46deg, rgba(109, 149, 252, 0.24) 11.025%, rgba(21, 21, 21, 0) 90.87%);
 
@@ -48,6 +48,7 @@ const ExpCostumers = styled.div`
 `
 const ExperiencesReceived = styled.div`
     margin-top: 30px;
+    
 `
 const ExpInfoWrapper = styled.div`
     flex-direction: column;

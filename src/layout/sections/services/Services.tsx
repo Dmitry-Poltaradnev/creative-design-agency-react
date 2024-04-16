@@ -37,7 +37,7 @@ export const Services = () => {
     );
 };
 
-const StyledServices = styled.div`
+const StyledServices = styled.section`
 `
 const AboutInfoWrapper = styled.div`
     flex-direction: column;

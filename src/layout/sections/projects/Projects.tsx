@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
-import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";
 import sliderImg from '../../../assets/img/projectPhoto2.webp'
 import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+
 
 export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'} gap={'50px'} >
-                    <BlockSubTitle >ENJOY OUR <span>LATEST</span> PROJECTS </BlockSubTitle>
+                    <ProjectsWrapper>ENJOY OUR <span>LATEST</span> PROJECTS </ProjectsWrapper>
                     <ProjectTitle>OUR WORK</ProjectTitle>
                 </FlexWrapper>
                 <Photo src={sliderImg} alt={'sliderImg'}/>
@@ -20,10 +20,22 @@ export const Projects = () => {
     );
 };
 
-const StyledProjects = styled.div`
+const StyledProjects = styled.section`
     text-align: center;
     padding: 100px 0 80px;
 `
+const ProjectsWrapper = styled.h2`
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 700;
+    max-width: 600px;
+    text-align: center;
+
+    span {
+        color: ${theme.colors.accent};
+    }
+`
+
 const Photo = styled.img`
 
 `

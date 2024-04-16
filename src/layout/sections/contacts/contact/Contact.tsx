@@ -8,7 +8,7 @@ export const Contact = () => {
     return (
         <StyledContact>
             <FlexWrapper gap={'30px'} align={'center'}>
-                <Icon width={'32px'} height={'45px'} viewBox={'0 0 30px 30px'} iconId={'map'}/>
+                <Icon width={'32'} height={'45'} viewBox={'0 0 32 45'} iconId={'map'}/>
                 <FlexWrapper direction={'column'} >
                     <ContactTitle>Office Address</ContactTitle>
                     <ContactLink>98, Arca St, PR City, 33414 , Indonesia</ContactLink>

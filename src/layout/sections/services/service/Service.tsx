@@ -6,7 +6,7 @@ import {theme} from "../../../../styles/Theme";
 export const Service = () => {
     return (
         <StyledService>
-            <Icon iconId={'experience2'}/>
+            <Icon iconId={'experience2'} viewBox={'0 0 100 100'}  width={'100'} height={'100'}/>
             <ServiceTitle>VIDEO MARKETING</ServiceTitle>
             <ServiceInfo>Lorem ipsum Neque do porro quisquam est qui do quam </ServiceInfo>
         </StyledService>
@@ -30,7 +30,7 @@ const ServiceTitle = styled.h3`
     text-align: center;
     text-transform: uppercase;
     color: ${theme.colors.accent};
-    margin-top:35px;
+    margin-top:10px;
 `
 const ServiceInfo = styled.p`
     font-size: 17px;

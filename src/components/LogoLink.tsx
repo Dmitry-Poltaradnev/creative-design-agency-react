@@ -26,5 +26,8 @@ const Link = styled.a`
         font-weight: 500;
         letter-spacing: -1px;
     }
+    @media ${theme.media.tablet}{
+        display: none;
+    }
 `
 

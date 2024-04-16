@@ -52,9 +52,9 @@ const StyledForm = styled.form`
         resize: none;
     }
 `
-
 const ContactSection = styled.section`
-    margin: 200px 0;
+    padding: 200px 0;
+    background: linear-gradient(192.46deg, rgba(109, 149, 252, 0.24) 11.025%,rgba(21, 21, 21, 0) 90.87%);    
 `
 const ContactInfoWrapper = styled.div`
     max-width: 600px;
@@ -72,8 +72,7 @@ const Field = styled.input`
     font-size: 21px;
     &::placeholder{
        color: ${theme.colors.font}; 
-        text-transform: capitalize;
-        
+        text-transform: capitalize;        
     }
 `
 const FormBtn = styled.button`

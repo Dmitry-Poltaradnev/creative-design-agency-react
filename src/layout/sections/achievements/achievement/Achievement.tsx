@@ -6,7 +6,7 @@ import {theme} from "../../../../styles/Theme";
 export const Achievement = () => {
     return (
         <StyledAchievement>
-            <Icon iconId={'achievements2'}/>
+            <Icon iconId={'achievements2'} width={'105'} height={'110'} viewBox={'0 0 90 110'}/>
             <StyledAchievementCounter>50+</StyledAchievementCounter>
             <StyledAchievementTitle>Happy customers</StyledAchievementTitle>
         </StyledAchievement>
@@ -17,8 +17,6 @@ const StyledAchievement = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 5px;
-    
-
 `
 const StyledAchievementCounter = styled.p`
     font-size: 64px;

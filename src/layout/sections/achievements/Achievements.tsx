@@ -19,7 +19,7 @@ export const Achievements = () => {
         </StyledAchievements>
     );
 };
-const StyledAchievements = styled.div`
+const StyledAchievements = styled.section`
     background: linear-gradient(270.00deg, rgb(109, 149, 252) -127.552%, rgba(21, 21, 21, 0.35) 77.969%);
     padding: 80px 0;
 `

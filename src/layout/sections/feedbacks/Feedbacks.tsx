@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import feedBackFirstImg from '../../../assets/img/feedbackSection1.webp'
 import feedBackSecondImg from '../../../assets/img/feedbackSection2.webp'
-import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";
 import {BlockTitle} from "../../../components/blockContent/BlockTitle";
 import {FeedBack} from "./feedback/FeedBack";
 import {Container} from "../../../components/Container";
@@ -27,16 +26,25 @@ export const Feedbacks = () => {
 };
 
 const FeedBackTitle = styled.h2`
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 700;
+    max-width: 500px;
+    text-align: center;
 
+    span {
+        color: ${theme.colors.accent};
+    }
 `
 
 const FeedBackWrapper = styled.div`    
-    padding: 100px 0;
+    padding: 50px 0 200px;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;    
+    overflow: hidden;
 
     &:before {
         content: '';
@@ -61,5 +69,5 @@ const FeedBackWrapper = styled.div`
     }
 `
 
-const StyledFeedbacks = styled.div`
+const StyledFeedbacks = styled.section`
 `

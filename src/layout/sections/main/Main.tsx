@@ -30,22 +30,24 @@ export const Main = () => {
 };
 
 
-const StyledMain = styled.div`   
+const StyledMain = styled.section`
     position: relative;
+
     &:after {
         content: '';
         background: linear-gradient(-82.82deg, rgba(109, 149, 252, 0.67) -53.756%, rgba(109, 149, 252, 0) 29.836%);
         position: absolute;
         z-index: 1;
         width: 140%;
-        height: 100%;       
+        height: 715px;
         right: 0;
         bottom: 0;
     }
+
     &:before {
         position: absolute;
         content: '';
-        background-image: url("${mainImg}") ;
+        background-image: url("${mainImg}");
         background-repeat: no-repeat;
         width: 1100px;
         height: 787px;
@@ -54,12 +56,14 @@ const StyledMain = styled.div`
         bottom: 0;
     }
 `
-const MainInfoWrapper = styled.section`
+const MainInfoWrapper = styled.div`
     flex-direction: column;
     display: flex;
     gap: 46px;
     max-width: 730px;
     margin: 190px 0;
     position: relative;  
+    
+
 `
 

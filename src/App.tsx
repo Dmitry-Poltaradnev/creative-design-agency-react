@@ -23,7 +23,7 @@ function App() {
             <Experience/>
             <Feedbacks/>
             <Contacts/>
-            {/*<Footer/>*/}
+            <Footer/>
         </div>
     );
 }
