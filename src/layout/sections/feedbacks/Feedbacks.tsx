@@ -37,13 +37,13 @@ const FeedBackTitle = styled.h2`
     }
 `
 
-const FeedBackWrapper = styled.div`    
+const FeedBackWrapper = styled.div`
     padding: 50px 0 200px;
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;    
+    gap: 20px;
     overflow: hidden;
 
     &:before {
@@ -66,6 +66,17 @@ const FeedBackWrapper = styled.div`
         right: -300px;
         top: 0;
         z-index: -1;
+    }
+
+    @media ${theme.media.tablet} {
+        padding-bottom: 50px;
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            display: none;
+        }
     }
 `
 

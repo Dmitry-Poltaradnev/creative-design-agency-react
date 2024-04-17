@@ -9,7 +9,7 @@ export const Achievements = () => {
         <StyledAchievements>
             <Container>
                 <FlexWrapper justify={'space-around'} align={'center'}
-                             wrap={'wrap'}>
+                             wrap={'wrap'} gap={'30px'} >
                     <Achievement/>
                     <Achievement/>
                     <Achievement/>

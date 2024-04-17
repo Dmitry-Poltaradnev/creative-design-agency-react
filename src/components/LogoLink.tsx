@@ -25,9 +25,6 @@ const Link = styled.a`
         color: ${theme.colors.accent};
         font-weight: 500;
         letter-spacing: -1px;
-    }
-    @media ${theme.media.tablet}{
-        display: none;
-    }
+    }    
 `
 

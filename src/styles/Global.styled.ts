@@ -37,5 +37,5 @@ export const GlobalStyle = createGlobalStyle`
         background-color: unset;
         border: unset;
         cursor: pointer;
-    }
+    }   
 `

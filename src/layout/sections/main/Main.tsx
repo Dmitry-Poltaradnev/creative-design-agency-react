@@ -14,24 +14,24 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                    <MainInfoWrapper>
-                        <BlockTitle>Welcome to creatic</BlockTitle>
-                        <BlockSubTitle letterSpacing={'1.2px'} fontSize={'80px'}>WE ARE <span>CREATIVE</span> DESIGN AGENCY</BlockSubTitle>
-                        <BlockLine backColor={theme.colors.accent} width={'144px'}/>
-                        <BlockInfo>Lorem ipsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-                            consectetur, adipisci
-                            velit
-                            Neque porro elit Neque porro quis ipsum</BlockInfo>
-                        <LinkBtn>GET IN TOUCH</LinkBtn>
-                    </MainInfoWrapper>
+                <MainInfoWrapper>
+                    <BlockTitle>Welcome to creatic</BlockTitle>
+                    <BlockSubTitle letterSpacing={'1.2px'} fontSize={'80px'}>WE ARE <span>CREATIVE</span> DESIGN AGENCY</BlockSubTitle>
+                    <BlockLine backColor={theme.colors.accent} width={'144px'}/>
+                    <BlockInfo>Lorem ipsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                        consectetur, adipisci
+                        velit
+                        Neque porro elit Neque porro quis ipsum</BlockInfo>
+                    <LinkBtn>GET IN TOUCH</LinkBtn>
+                </MainInfoWrapper>
             </Container>
         </StyledMain>
     );
 };
 
-
 const StyledMain = styled.section`
     position: relative;
+    min-height: 787px;
 
     &:after {
         content: '';
@@ -39,7 +39,7 @@ const StyledMain = styled.section`
         position: absolute;
         z-index: 1;
         width: 140%;
-        height: 715px;
+        height: 787px;
         right: 0;
         bottom: 0;
     }
@@ -54,16 +54,20 @@ const StyledMain = styled.section`
         z-index: -1;
         right: 0;
         bottom: 0;
-    }
+        @media ${theme.media.tablet} {
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
 `
+
 const MainInfoWrapper = styled.div`
     flex-direction: column;
     display: flex;
     gap: 46px;
     max-width: 730px;
-    margin: 190px 0;
-    position: relative;  
-    
-
+    padding: 45px 0;
+    position: relative;
 `
 

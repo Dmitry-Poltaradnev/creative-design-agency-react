@@ -12,7 +12,7 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper justify={'center'}>
                     <FooterInfoWrapper >
-                        <LogoLink/>
+                            <LogoLink/>
                         <BlockLine/>
                         <FooterInfo>Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque porro
                             elit NeDque</FooterInfo>

@@ -8,12 +8,13 @@ import {LinkBtn} from "../../../components/blockContent/LinkBtn";
 import {Service} from "./service/Service";
 import {Container} from "../../../components/Container";
 import {BlockLine} from "../../../components/blockContent/BlockLine";
+import {theme} from "../../../styles/Theme";
 
 export const Services = () => {
     return (
         <StyledServices>
             <Container>
-                <FlexWrapper align={'center'} justify={'space-between'}>
+                <FlexWrapperServices>
                     <AboutInfoWrapper>
                         <BlockTitle>our services</BlockTitle>
                         <BlockSubTitle lineHeight={'1.2'}>Experience the power
@@ -25,25 +26,38 @@ export const Services = () => {
                         </BlockInfo>
                         <LinkBtn>VIEW ALL</LinkBtn>
                     </AboutInfoWrapper>
-                    <FlexWrapper justify={'center'} align={'center'} wrap={'wrap'}>
+                    <FlexWrapper justify={'center'} align={'center'} wrap={'wrap'} >
                         <Service/>
                         <Service/>
                         <Service/>
                         <Service/>
                     </FlexWrapper>
-                </FlexWrapper>
+                </FlexWrapperServices>
             </Container>
         </StyledServices>
     );
 };
 
+const FlexWrapperServices = styled.div`
+    display: flex;
+    justify-content: space-between;
+    @media ${theme.media.maxTablet} {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+`
+
 const StyledServices = styled.section`
+    padding: 100px 0;
 `
 const AboutInfoWrapper = styled.div`
     flex-direction: column;
     display: flex;
     gap: 35px;
     max-width: 660px;
-    margin: 190px 0;
-    position: relative;
+    @media ${theme.media.maxTablet} {
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
 `

@@ -14,7 +14,7 @@ export const Experience = () => {
     return (
         <StyledExperience>
             <Container>
-                <FlexWrapper align={'center'} justify={'center'}>
+                <ExperienceFlexWrapper>
                     <ExpInfoWrapper>
                         <BlockTitle>why us?</BlockTitle>
                         <BlockLine backColor={theme.colors.accent}/>
@@ -32,19 +32,28 @@ export const Experience = () => {
                             <ExperienceReceived/>
                         </ExperiencesReceived>
                     </ExpCostumers>
-                </FlexWrapper>
+                </ExperienceFlexWrapper>
             </Container>
         </StyledExperience>
     );
 };
 
-const StyledExperience = styled.section`
-    padding: 190px 0;
-    background: linear-gradient(12.46deg, rgba(109, 149, 252, 0.24) 11.025%, rgba(21, 21, 21, 0) 90.87%);
+const ExperienceFlexWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media ${theme.media.tablet} {
+        flex-direction: column;
+        gap: 50px;
+    }
+`
 
+const StyledExperience = styled.section`
+    background: linear-gradient(12.46deg, rgba(109, 149, 252, 0.24) 11.025%, rgba(21, 21, 21, 0) 90.87%);
+    padding: 40px 0;
 `
 const ExpCostumers = styled.div`
-    padding-left: 40px;
+    width: 50%;
 `
 const ExperiencesReceived = styled.div`
     margin-top: 30px;
@@ -54,5 +63,8 @@ const ExpInfoWrapper = styled.div`
     flex-direction: column;
     display: flex;
     gap: 35px;
-    width: 110%;    
+    width: 50%;
+    @media ${theme.media.tablet} {
+        align-items: center;
+    }
 `

@@ -12,7 +12,7 @@ export const Contacts = () => {
     return (
         <ContactSection>
             <Container>
-                <FlexWrapper justify={'space-between'} gap={'30px'} align={'center'}>
+                <FlexWrapperContact>
                     <ContactInfoWrapper>
                         <BlockSubTitle>Get in <span>TOUCH</span></BlockSubTitle>
                         <BlockLine/>
@@ -31,7 +31,7 @@ export const Contacts = () => {
                         <Field placeholder={'message'} as={'textarea'}/>
                         <FormBtn type={'submit'}>SEND MESSAGE</FormBtn>
                     </StyledForm>
-                </FlexWrapper>
+                </FlexWrapperContact>
             </Container>
         </ContactSection>
     );
@@ -52,15 +52,28 @@ const StyledForm = styled.form`
         resize: none;
     }
 `
+const  FlexWrapperContact = styled.div`
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    @media ${theme.media.tablet} {
+        flex-direction: column;
+        gap: 50px;
+    }
+`
 const ContactSection = styled.section`
-    padding: 200px 0;
-    background: linear-gradient(192.46deg, rgba(109, 149, 252, 0.24) 11.025%,rgba(21, 21, 21, 0) 90.87%);    
+    background: linear-gradient(192.46deg, rgba(109, 149, 252, 0.24) 11.025%,rgba(21, 21, 21, 0) 90.87%);
+    padding: 40px 0;
 `
 const ContactInfoWrapper = styled.div`
     max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @media ${theme.media.tablet} {
+        align-items: center;
+    }
 `
 const Field = styled.input`
     background-color: ${theme.colors.primaryBg};

@@ -5,7 +5,6 @@ import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 
-
 export const Projects = () => {
     return (
         <StyledProjects>
@@ -22,7 +21,7 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     text-align: center;
-    padding: 100px 0 80px;
+    padding: 50px;
 `
 const ProjectsWrapper = styled.h2`
     text-transform: uppercase;
@@ -37,7 +36,8 @@ const ProjectsWrapper = styled.h2`
 `
 
 const Photo = styled.img`
-
+    
+    
 `
 const ProjectTitle = styled.h2`
     padding: 0 120px;
