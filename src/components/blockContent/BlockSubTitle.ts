@@ -9,12 +9,11 @@ type BlockSubTitlePropsType = {
 }
 
 export const BlockSubTitle = styled.p<BlockSubTitlePropsType>`
-    font-size: ${props => props.fontSize || '48px'};
+    font-size: calc( (100vw - 360px) / (1920 - 360) * (48 - 36) + 36px);
     letter-spacing: ${props => props.letterSpacing || '0px'};
     line-height: ${props => props.lineHeight || '1.1'};
     text-transform: uppercase;
     font-weight: 700;
-    position: relative;
 
     span {
         color: ${theme.colors.accent};

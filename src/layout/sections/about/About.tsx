@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import aboutImg from '../../../assets/img/aboutUsPhoto.webp'
 import {BlockTitle} from "../../../components/blockContent/BlockTitle";
 import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";

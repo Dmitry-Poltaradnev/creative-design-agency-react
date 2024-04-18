@@ -10,10 +10,10 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'} gap={'50px'} >
-                    <ProjectsWrapper>ENJOY OUR <span>LATEST</span> PROJECTS </ProjectsWrapper>
+                    <ProjectsTitle>ENJOY OUR <span>LATEST</span> PROJECTS </ProjectsTitle>
                     <ProjectTitle>OUR WORK</ProjectTitle>
                 </FlexWrapper>
-                <Photo src={sliderImg} alt={'sliderImg'}/>
+                {/*<Photo src={sliderImg} alt={'sliderImg'}/>*/}
             </Container>
         </StyledProjects>
     );
@@ -23,9 +23,9 @@ const StyledProjects = styled.section`
     text-align: center;
     padding: 50px;
 `
-const ProjectsWrapper = styled.h2`
+const ProjectsTitle = styled.h2`
+    font-size: calc((100vw - 360px) / (1920 - 360) * (48 - 36) + 36px);
     text-transform: uppercase;
-    font-size: 55px;
     font-weight: 700;
     max-width: 600px;
     text-align: center;
@@ -35,9 +35,7 @@ const ProjectsWrapper = styled.h2`
     }
 `
 
-const Photo = styled.img`
-    
-    
+const Photo = styled.img`    
 `
 const ProjectTitle = styled.h2`
     padding: 0 120px;

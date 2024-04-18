@@ -1,7 +1,6 @@
 import React from 'react';
 import mainImg from '../../../assets/img/mainPhoto.webp'
 import styled from "styled-components";
-import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";
 import {BlockTitle} from "../../../components/blockContent/BlockTitle";
 import {BlockInfo} from "../../../components/blockContent/BlockInfo";
 import {LinkBtn} from "../../../components/blockContent/LinkBtn";
@@ -16,7 +15,7 @@ export const Main = () => {
             <Container>
                 <MainInfoWrapper>
                     <BlockTitle>Welcome to creatic</BlockTitle>
-                    <BlockSubTitle letterSpacing={'1.2px'} fontSize={'80px'}>WE ARE <span>CREATIVE</span> DESIGN AGENCY</BlockSubTitle>
+                    <MainSubTitle>WE ARE <span>CREATIVE</span> DESIGN AGENCY</MainSubTitle>
                     <BlockLine backColor={theme.colors.accent} width={'144px'}/>
                     <BlockInfo>Lorem ipsumNeque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                         consectetur, adipisci
@@ -28,6 +27,17 @@ export const Main = () => {
         </StyledMain>
     );
 };
+
+const MainSubTitle = styled.p`
+    letter-spacing: 1.2px;
+    font-size: calc((100vw - 360px) / (1920 - 360) * (80 - 50) + 50px);
+    text-transform: uppercase;
+    font-weight: 700;
+
+    span {
+        color: ${theme.colors.accent};
+    }
+`
 
 const StyledMain = styled.section`
     position: relative;

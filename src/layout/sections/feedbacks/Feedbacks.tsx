@@ -27,7 +27,7 @@ export const Feedbacks = () => {
 
 const FeedBackTitle = styled.h2`
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: calc( (100vw - 360px) / (1920 - 360) * (48 - 36) + 36px);
     font-weight: 700;
     max-width: 500px;
     text-align: center;

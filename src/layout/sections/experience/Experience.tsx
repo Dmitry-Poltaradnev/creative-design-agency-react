@@ -54,6 +54,9 @@ const StyledExperience = styled.section`
 `
 const ExpCostumers = styled.div`
     width: 50%;
+    @media ${theme.media.tablet}{
+        width: 85%;
+    }
 `
 const ExperiencesReceived = styled.div`
     margin-top: 30px;
@@ -66,5 +69,6 @@ const ExpInfoWrapper = styled.div`
     width: 50%;
     @media ${theme.media.tablet} {
         align-items: center;
+        width: 85%;
     }
 `

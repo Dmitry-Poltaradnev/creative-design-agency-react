@@ -11,14 +11,14 @@ export const FeedBack = () => {
             <FeedBackInfo>
                 Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque porro elit
             </FeedBackInfo>
-            <FlexWrapper gap={'20px'} align={'center'}>
+            <FeedBackFlexWrapper>
                 <Photo src={personPhoto} alt='personImg'/>
                 <FlexWrapper direction={'column'} >
                     <p>Carol Chaves:</p>
                     <LinkMail>@caroles.gmail.com</LinkMail>
                 </FlexWrapper>
                 <Icon iconId={'quotes'} />
-            </FlexWrapper>
+            </FeedBackFlexWrapper>
         </FeedBackWrapper>
     );
 };
@@ -29,6 +29,20 @@ const FeedBackWrapper = styled.div`
     border-radius: 40px;
     padding: 15px;
     margin: 80px 0;
+    width: 90%;
+    @media ${theme.media.mobile} {
+        margin: 30px 0;
+    }
+`
+const FeedBackFlexWrapper = styled.p`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    @media ${theme.media.mobile} {
+        flex-direction: column;
+        gap: 30px;
+    }
 `
 const  FeedBackInfo = styled.p`
 margin-bottom: 50px;
@@ -38,6 +52,6 @@ const LinkMail = styled.a`
 `
 
 const Photo = styled.img`
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
 `
