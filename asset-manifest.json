@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/creative-design-agency-react/static/css/main.31d6cfe0.css",
-    "main.js": "/creative-design-agency-react/static/js/main.b43c031c.js",
+    "main.js": "/creative-design-agency-react/static/js/main.19910f4f.js",
     "static/media/icons-sprite.svg": "/creative-design-agency-react/static/media/icons-sprite.d48027018b828536bd8d6cbe5c73ee8a.svg",
     "static/media/feedbackSection2.webp": "/creative-design-agency-react/static/media/feedbackSection2.b2cadf37e0d91874983b.webp",
     "static/media/mainPhoto.webp": "/creative-design-agency-react/static/media/mainPhoto.cc376036f5779f47011f.webp",
@@ -9,10 +9,10 @@
     "static/media/aboutUsPhoto.webp": "/creative-design-agency-react/static/media/aboutUsPhoto.5f0cbff900d2f477d861.webp",
     "static/media/testimonialsPerson.png": "/creative-design-agency-react/static/media/testimonialsPerson.5d7e099d0bf15c14aab4.png",
     "index.html": "/creative-design-agency-react/index.html",
-    "main.b43c031c.js.map": "/creative-design-agency-react/static/js/main.b43c031c.js.map"
+    "main.19910f4f.js.map": "/creative-design-agency-react/static/js/main.19910f4f.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.b43c031c.js"
+    "static/js/main.19910f4f.js"
   ]
 }
