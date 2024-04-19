@@ -1,32 +1,22 @@
 import React from 'react';
-import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon";
-import {theme} from "../../../../styles/Theme";
+import {S} from '../Achievment_Styles'
 
-export const Achievement = () => {
+type AchievementPropsType = {
+    iconId: string,
+    viewBox: string,
+    width: string,
+    height: string,
+    counter: string,
+    title: string,
+}
+export const Achievement = (props:AchievementPropsType) => {
     return (
-        <StyledAchievement>
-            <Icon iconId={'achievements2'} width={'105'} height={'110'} viewBox={'0 0 90 110'}/>
-            <StyledAchievementCounter>50+</StyledAchievementCounter>
-            <StyledAchievementTitle>Happy customers</StyledAchievementTitle>
-        </StyledAchievement>
+        <S.Achievement>
+            <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
+            <S.AchievementCounter>{props.counter}</S.AchievementCounter>
+            <S.AchievementTitle>{props.title}</S.AchievementTitle>
+        </S.Achievement>
     );
 };
-const StyledAchievement = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-`
-const StyledAchievementCounter = styled.p`
-    font-size: 64px;
-    font-weight: 700;
-    letter-spacing: 0;
-    text-align: center;
-    line-height: 1.3;
-`
-const StyledAchievementTitle = styled.h3`
-    font-weight: 300;
-    color: ${theme.colors.accent};
-    font-size: 21px;
-`
+

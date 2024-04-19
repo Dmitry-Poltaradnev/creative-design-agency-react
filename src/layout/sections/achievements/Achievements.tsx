@@ -1,25 +1,58 @@
 import React from 'react';
-import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Achievement} from "./achievement/Achievement";
 import {Container} from "../../../components/Container";
+import {S} from './Achievment_Styles'
 
+const AchievemenData = [
+    {
+        iconId: 'achievements1',
+        viewBox: '0 0 90 110',
+        width: '105',
+        height: '110',
+        counter: '50+',
+        title: 'Team members'
+    }, {
+        iconId: 'achievements2',
+        viewBox: '0 0 90 110',
+        width: '105',
+        height: '110',
+        counter: '200+',
+        title: 'Project done'
+    }, {
+        iconId: 'achievements3',
+        viewBox: '0 0 90 110',
+        width: '105',
+        height: '110',
+        counter: '500+',
+        title: 'Happy customers'
+    }, {
+        iconId: 'achievements4',
+        viewBox: '0 0 90 110',
+        width: '105',
+        height: '110',
+        counter: '75+',
+        title: 'Award Winning '
+    },
+
+]
 export const Achievements = () => {
     return (
-        <StyledAchievements>
+        <S.Achievements>
             <Container>
                 <FlexWrapper justify={'space-around'} align={'center'}
-                             wrap={'wrap'} gap={'30px'} >
-                    <Achievement/>
-                    <Achievement/>
-                    <Achievement/>
-                    <Achievement/>
+                             wrap={'wrap'} gap={'30px'}>
+                    {AchievemenData.map((item, index) => {
+                        return <Achievement iconId={item.iconId} title={item.title} counter={item.counter}
+                                            viewBox={item.viewBox}
+                                            height={item.height} width={item.width}
+                                            key={index}
+                        />
+
+                    })}
+
                 </FlexWrapper>
             </Container>
-        </StyledAchievements>
+        </S.Achievements>
     );
 };
-const StyledAchievements = styled.section`
-    background: linear-gradient(270.00deg, rgb(109, 149, 252) -127.552%, rgba(21, 21, 21, 0.35) 77.969%);
-    padding: 80px 0;
-`

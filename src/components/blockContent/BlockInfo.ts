@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const BlockInfo = styled.div`
+export const BlockInfo = styled.p`
     line-height: 32px;
     font-size: calc( (100vw - 360px) / (1920 - 360) * (21 - 18) + 18px);    
 `

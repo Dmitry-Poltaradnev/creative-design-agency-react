@@ -1,100 +1,38 @@
 import React from 'react';
-import {FlexWrapper} from "../../../components/FlexWrapper";
 import {BlockSubTitle} from "../../../components/blockContent/BlockSubTitle";
 import {BlockInfo} from "../../../components/blockContent/BlockInfo";
 import {Contact} from "./contact/Contact";
 import {Container} from "../../../components/Container";
-import styled from "styled-components";
 import {BlockLine} from "../../../components/blockContent/BlockLine";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Contacts_Styled"
 
 export const Contacts = () => {
     return (
-        <ContactSection>
+        <S.Contacts>
             <Container>
-                <FlexWrapperContact>
-                    <ContactInfoWrapper>
+                <S.WrapperContact>
+                    <S.ContactInfoWrapper>
                         <BlockSubTitle>Get in <span>TOUCH</span></BlockSubTitle>
                         <BlockLine/>
                         <BlockInfo>Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque
                             porro elit
                             NeDque porro </BlockInfo>
-                        <FlexWrapper gap={'30px'} direction={'column'}>
+                        <S.ContactList>
                             <Contact/>
                             <Contact/>
                             <Contact/>
-                        </FlexWrapper>
-                    </ContactInfoWrapper>
-                    <StyledForm>
-                        <Field placeholder={'name'}/>
-                        <Field placeholder={'email'}/>
-                        <Field placeholder={'message'} as={'textarea'}/>
-                        <FormBtn type={'submit'}>SEND MESSAGE</FormBtn>
-                    </StyledForm>
-                </FlexWrapperContact>
+                        </S.ContactList>
+                    </S.ContactInfoWrapper>
+                    <S.StyledForm>
+                        <S.Field placeholder={'name'}/>
+                        <S.Field placeholder={'email'}/>
+                        <S.Field placeholder={'message'} as={'textarea'}/>
+                        <S.FormBtn type={'submit'}>SEND MESSAGE</S.FormBtn>
+                    </S.StyledForm>
+                </S.WrapperContact>
             </Container>
-        </ContactSection>
+        </S.Contacts>
     );
 };
 
-const StyledForm = styled.form`
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 460px;
-    align-items: center;
-    
-    textarea{
-        font-family: 'Poppins','sans-serif';
-        height: 160px;
-        resize: none;
-    }
-`
-const  FlexWrapperContact = styled.div`
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    align-items: center;
-    @media ${theme.media.tablet} {
-        flex-direction: column;
-        gap: 50px;
-    }
-`
-const ContactSection = styled.section`
-    background: linear-gradient(192.46deg, rgba(109, 149, 252, 0.24) 11.025%,rgba(21, 21, 21, 0) 90.87%);
-    padding: 40px 0;
-`
-const ContactInfoWrapper = styled.div`
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    @media ${theme.media.tablet} {
-        align-items: center;
-    }
-`
-const Field = styled.input`
-    background-color: ${theme.colors.primaryBg};
-    width: 100%;
-    border: 1px solid ${theme.colors.font};
-    padding: 10px 15px;
-    font-weight: 500;
-    color: ${theme.colors.font};
-    font-size: 21px;
-    &::placeholder{
-       color: ${theme.colors.font}; 
-        text-transform: capitalize;        
-    }
-`
-const FormBtn = styled.button`
-    color: ${theme.colors.primaryBg};
-    background-color: ${theme.colors.accent};   
-    font-family: 'Poppins','sans-serif';
-    border-radius: 2px;
-    max-width: 200px;
-    padding: 10px 25px 10px 25px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
-`
+

@@ -8,7 +8,7 @@ type BlockSubTitlePropsType = {
     maxWidth?: string
 }
 
-export const BlockSubTitle = styled.p<BlockSubTitlePropsType>`
+export const BlockSubTitle = styled.h2<BlockSubTitlePropsType>`
     font-size: calc( (100vw - 360px) / (1920 - 360) * (48 - 36) + 36px);
     letter-spacing: ${props => props.letterSpacing || '0px'};
     line-height: ${props => props.lineHeight || '1.1'};

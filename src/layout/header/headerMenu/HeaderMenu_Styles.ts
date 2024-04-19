@@ -1,32 +1,24 @@
-import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
-    const [menuIsOpen, setMenuIsOpen] = useState(false)
-    const onBurgerBtnClick = () => {
-        setMenuIsOpen(!menuIsOpen)
-    }
-    return (
-        <StyledMobileMenu>
-            <BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuPopUp isOpen={menuIsOpen} onClick={() =>{
-                setMenuIsOpen(false)
-            }}>
-                <ul>
-                    {props.menuItems.map((item, index) => {
-                        return <ListItem key={index}>
-                            <Link href="#">{item}</Link>
-                        </ListItem>
-                    })}
-                </ul>
-            </MobileMenuPopUp>
-        </StyledMobileMenu>
-    );
-};
+type MenuPropsType = {
+    fontSize?: string,
+}
 
+const DesktopMenu = styled.nav`
+    ul {
+        display: flex;
+        gap: 30px;
+    }
+`
+const ListItem = styled.li`
+`
+const Link = styled.a`
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 32px;
+    color: ${theme.colors.font};
+`
 const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
     position: fixed;
     background-color: ${theme.colors.primaryBg};
@@ -49,20 +41,10 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
         align-items: center;
     }
 `
-
-const StyledMobileMenu = styled.nav`
-    display: none;
-    @media ${theme.media.tablet} {
-        display: block;
+const MobileMenu = styled.nav<MenuPropsType>`
+    a {
+        font-size: ${props => props.fontSize || '40px'};
     }
-`
-const ListItem = styled.li`
-`
-const Link = styled.a`
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 32px;
-    color: ${theme.colors.font};
 `
 const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
@@ -111,3 +93,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         }
     }
 `
+export const S = {
+    DesktopMenu,
+    ListItem,
+    Link,
+    MobileMenuPopUp,
+    MobileMenu,
+    BurgerButton,
+}
