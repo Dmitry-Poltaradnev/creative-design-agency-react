@@ -10,6 +10,9 @@ const Achievement = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 5px;
+    @media ${theme.media.mobile}{
+        width: 90%;
+    }
 `
 const AchievementCounter = styled.p`
     font-size: 64px;

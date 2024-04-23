@@ -59,7 +59,7 @@ export const Footer = () => {
                         <S.FooterSocialsWrap>
                             {
                                 socialsIcons.map((item, index) => {
-                                    return <li>
+                                    return <li key={index}>
                                         <a href="#"> <Icon height={item.height} width={item.width}
                                                            viewBox={item.viewBox} iconId={item.iconId}/>
                                         </a>
