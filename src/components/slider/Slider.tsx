@@ -1,58 +1,35 @@
 import React from 'react';
-import styled from "styled-components";
-import sliderImgFirst from "../../assets/img/projectPhoto1.webp";
-import sliderImgSecond from "../../assets/img/projectPhoto2.webp";
-import sliderImgThird from "../../assets/img/projectPhoto3.webp";
-import {FlexWrapper} from "../FlexWrapper";
-import {theme} from "../../styles/Theme";
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import {S} from './Slyder_Styled'
+import sliderImgFirst from "../../assets/img/firstImage.webp";
+import sliderImgSecond from "../../assets/img/secondImage.webp";
+import sliderImgThird from "../../assets/img/thirdImage.webp";
+import '../../styles/slider.css'
 
-export const Slider = () => {
+type SlidePropsType = {
+    imageLink: string
+}
+
+const SLide = (props: SlidePropsType) => {
     return (
-        <StyledSlider>
-                <FlexWrapper>
-                    <Slide>
-                        {/*<Photo src={sliderImgFirst} alt={'sliderImg'}/>*/}
-                        <Photo src={sliderImgSecond} alt={'sliderImg'}/>
-                        {/*<Photo src={sliderImgThird} alt={'sliderImg'}/>*/}
-                    </Slide>
-                </FlexWrapper>
-                <Pagination>
-                    <span></span>
-                    <span className={'active'}></span>
-                    <span></span>
-                </Pagination>
-        </StyledSlider>
-    );
-};
+        <S.Slide>
+            <S.Photo src={props.imageLink} alt={'sliderImg'}/>
+        </S.Slide>
+    )
+}
 
+const items = [
+    <SLide imageLink={sliderImgFirst}/>,
+    <SLide imageLink={sliderImgSecond}/>,
+    <SLide imageLink={sliderImgThird}/>,
+];
 
-
-const Pagination = styled.div`
-    span {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: ${theme.colors.font};
-        margin: 30px 5px;
-        border-radius: 5px;
-
-        &.active {
-            background-color: ${theme.colors.accent};
-            width: 25px;
-            border-radius: 10px;
-        }
-    }
-`
-const StyledSlider = styled.div`
-    border: 1px solid red;
-`
-const Photo = styled.img`
-    max-width: 550px;
-    width: 100%;    
-`
-const Slide = styled.div`
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
+export const Slider = () => (
+    <S.Slider>
+        <AliceCarousel
+            mouseTracking
+            items={items}
+        />
+    </S.Slider>
+);

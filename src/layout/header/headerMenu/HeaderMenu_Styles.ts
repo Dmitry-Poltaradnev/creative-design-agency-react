@@ -18,6 +18,10 @@ const Link = styled.a`
     font-weight: 400;
     line-height: 32px;
     color: ${theme.colors.font};
+    transition: all 0.2s ;
+    :hover{
+        color: ${theme.colors.accent};
+    }
 `
 const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
     position: fixed;

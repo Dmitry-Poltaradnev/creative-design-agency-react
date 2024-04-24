@@ -6,9 +6,29 @@ import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from './Header_Styles'
 
+const items = [
+    {
+        title: 'Home',
+        href: 'home'
+    }, {
+        title: 'About Us',
+        href: 'about'
+    }, {
+        title: 'Services',
+        href: 'services'
+    }, {
+        title: 'Portfolio',
+        href: 'portfolio'
+    }, {
+        title: 'Experience',
+        href: 'experience'
+    },
+    {
+        title: 'Contact Us',
+        href: 'contacts'
+    },
+]
 
-
-const items = ['Home', 'About Us', 'Services', 'Portfolio', 'Pages', 'Contact Us']
 export const Header: React.FC = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 950;
