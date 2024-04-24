@@ -1,18 +1,19 @@
 {
   "files": {
     "main.css": "/creative-design-agency-react/static/css/main.31d6cfe0.css",
-    "main.js": "/creative-design-agency-react/static/js/main.9169d372.js",
-    "static/media/icons-sprite.svg": "/creative-design-agency-react/static/media/icons-sprite.d48027018b828536bd8d6cbe5c73ee8a.svg",
+    "main.js": "/creative-design-agency-react/static/js/main.79f0bbee.js",
+    "static/media/projectPhoto2.webp": "/creative-design-agency-react/static/media/projectPhoto2.24a7d6d91c8746716ab8.webp",
+    "static/media/icons-sprite.svg": "/creative-design-agency-react/static/media/icons-sprite.f3ca24cf0585531acea20f20847d4c36.svg",
     "static/media/feedbackSection2.webp": "/creative-design-agency-react/static/media/feedbackSection2.b2cadf37e0d91874983b.webp",
     "static/media/mainPhoto.webp": "/creative-design-agency-react/static/media/mainPhoto.cc376036f5779f47011f.webp",
     "static/media/feedbackSection1.webp": "/creative-design-agency-react/static/media/feedbackSection1.74202fa8636fc211d8db.webp",
     "static/media/aboutUsPhoto.webp": "/creative-design-agency-react/static/media/aboutUsPhoto.5f0cbff900d2f477d861.webp",
     "static/media/testimonialsPerson.png": "/creative-design-agency-react/static/media/testimonialsPerson.5d7e099d0bf15c14aab4.png",
     "index.html": "/creative-design-agency-react/index.html",
-    "main.9169d372.js.map": "/creative-design-agency-react/static/js/main.9169d372.js.map"
+    "main.79f0bbee.js.map": "/creative-design-agency-react/static/js/main.79f0bbee.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.9169d372.js"
+    "static/js/main.79f0bbee.js"
   ]
 }
