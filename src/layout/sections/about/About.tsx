@@ -9,7 +9,7 @@ import {S} from './About_styles'
 
 export const About = () => {
     return (
-        <S.About id={'contact'}>
+        <S.About id={'about'}>
             <Container>
                 <S.AboutFlexWrapper >
                     <S.AboutInfoWrapper>

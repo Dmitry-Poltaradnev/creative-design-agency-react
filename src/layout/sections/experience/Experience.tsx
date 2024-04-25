@@ -11,7 +11,7 @@ import {S} from './Experience_Styled'
 
 export const Experience = () => {
     return (
-        <S.Experience>
+        <S.Experience id={'pages'}>
             <Container>
                 <S.ExperienceWrapper>
                     <S.ExpInfoWrapper>

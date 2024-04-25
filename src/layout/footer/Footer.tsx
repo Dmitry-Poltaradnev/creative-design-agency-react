@@ -60,7 +60,7 @@ export const Footer = () => {
                             {
                                 socialsIcons.map((item, index) => {
                                     return <li key={index}>
-                                        <a href="#"> <Icon height={item.height} width={item.width}
+                                        <a href='#'> <Icon height={item.height} width={item.width}
                                                            viewBox={item.viewBox} iconId={item.iconId}/>
                                         </a>
                                     </li>

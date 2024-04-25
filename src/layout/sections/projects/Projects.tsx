@@ -6,7 +6,7 @@ import {Slider} from "../../../components/slider/Slider";
 
 export const Projects = () => {
     return (
-        <S.Projects>
+        <S.Projects id={'portfolio'}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'} gap={'50px'} >
                     <S.ProjectsTitle>ENJOY OUR <span>LATEST</span> PROJECTS </S.ProjectsTitle>

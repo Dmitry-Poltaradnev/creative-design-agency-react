@@ -13,6 +13,9 @@ const ContactTitle = styled.h4`
 `
 const ContactLink = styled.a`
     color: ${theme.colors.accent};
+    @media ${theme.media.mobile}{
+        font-size: 17px;
+    }
 `
 const ContactList = styled.ul`
     display: flex;

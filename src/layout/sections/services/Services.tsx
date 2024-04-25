@@ -45,7 +45,7 @@ const ServiceData = [
 
 export const Services = () => {
     return (
-        <S.Services>
+        <S.Services id={'services'}>
             <Container>
                 <S.WrapperServices>
                     <S.AboutInfoWrapper>

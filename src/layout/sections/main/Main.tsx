@@ -10,7 +10,7 @@ import {S} from './Main_Styles'
 
 export const Main = () => {
     return (
-        <S.Main>
+        <S.Main id={'home'}>
             <Container>
                 <S.MainInfoWrapper>
                     <BlockTitle>Welcome to creatic</BlockTitle>

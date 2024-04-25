@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
 type MenuPropsType = {
     fontSize?: string,
@@ -12,8 +13,9 @@ const DesktopMenu = styled.nav`
     }
 `
 const ListItem = styled.li`
+    
 `
-const Link = styled.a`
+const NavLink = styled(Link)`
     font-size: 21px;
     font-weight: 400;
     line-height: 32px;
@@ -100,7 +102,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 export const S = {
     DesktopMenu,
     ListItem,
-    Link,
+    NavLink,
     MobileMenuPopUp,
     MobileMenu,
     BurgerButton,

@@ -20,8 +20,8 @@ const items = [
         title: 'Portfolio',
         href: 'portfolio'
     }, {
-        title: 'Experience',
-        href: 'experience'
+        title: 'Pages',
+        href: 'pages'
     },
     {
         title: 'Contact Us',
@@ -31,7 +31,7 @@ const items = [
 
 export const Header: React.FC = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
-    const breakpoint = 950;
+    const breakpoint = 970;
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)

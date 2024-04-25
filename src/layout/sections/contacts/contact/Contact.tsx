@@ -3,13 +3,23 @@ import {Icon} from "../../../../components/icon/Icon";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import {S} from '../Contacts_Styled'
 
-export const Contact = () => {
+type ContactPropsType = {
+    iconId: string,
+    title: string,
+    subTitle: string,
+    width: string,
+    height: string,
+    viewBox: string,
+}
+
+export const Contact = (props: ContactPropsType) => {
+
     return (
         <S.ContactItem>
-            <Icon width={'32'} height={'45'} viewBox={'0 0 32 45'} iconId={'map'}/>
+            <Icon width={props.width} height={props.height} viewBox={props.viewBox} iconId={props.iconId}/>
             <FlexWrapper direction={'column'}>
-                <S.ContactTitle>Office Address</S.ContactTitle>
-                <S.ContactLink>98, Arca St, PR City, 33414 , Indonesia</S.ContactLink>
+                <S.ContactTitle>{props.title}</S.ContactTitle>
+                <S.ContactLink>{props.subTitle}</S.ContactLink>
             </FlexWrapper>
         </S.ContactItem>
     );

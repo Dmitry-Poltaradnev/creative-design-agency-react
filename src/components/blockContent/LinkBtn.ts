@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type LinkBtnPropsType ={
     widthLink?:string
@@ -14,4 +15,9 @@ export const LinkBtn = styled.a<LinkBtnPropsType>`
     border-radius: 2px;
     font-size: 17px;
     letter-spacing: 2.5px;
+    transition: .3s all;
+    :hover{
+        color: ${theme.colors.accent};
+        background-color: ${theme.colors.font};
+    }
 `

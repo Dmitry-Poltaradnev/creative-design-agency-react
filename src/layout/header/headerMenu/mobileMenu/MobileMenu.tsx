@@ -7,7 +7,7 @@ interface MenuItem {
     href: string;
 }
 
-export const MobileMenu: React.FC<{ menuItems: MenuItem[] }> = (props: { menuItems:  MenuItem[] }) => {
+export const MobileMenu: React.FC<{ menuItems: MenuItem[] }> = (props: { menuItems: MenuItem[] }) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)
@@ -19,6 +19,7 @@ export const MobileMenu: React.FC<{ menuItems: MenuItem[] }> = (props: { menuIte
             </S.BurgerButton>
             <S.MobileMenuPopUp isOpen={menuIsOpen} onClick={() => {
                 setMenuIsOpen(false)
+
             }}>
                 <Menu menuItems={props.menuItems}/>
             </S.MobileMenuPopUp>

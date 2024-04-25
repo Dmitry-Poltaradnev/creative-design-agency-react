@@ -9,6 +9,7 @@ import {Experience} from "./layout/sections/experience/Experience";
 import {Feedbacks} from "./layout/sections/feedbacks/Feedbacks";
 import {Contacts} from "./layout/sections/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Feedbacks/>
             <Contacts/>
             <Footer/>
+            <GoTopBtn/>
         </div>
     );
 }
