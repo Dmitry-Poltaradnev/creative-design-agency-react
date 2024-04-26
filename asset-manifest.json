@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/creative-design-agency-react/static/css/main.1d775016.css",
-    "main.js": "/creative-design-agency-react/static/js/main.b64f759a.js",
+    "main.js": "/creative-design-agency-react/static/js/main.5828d35c.js",
     "static/media/icons-sprite.svg": "/creative-design-agency-react/static/media/icons-sprite.5dc1ee8569092607d71f405969c70264.svg",
     "static/media/feedbackSection2.webp": "/creative-design-agency-react/static/media/feedbackSection2.b2cadf37e0d91874983b.webp",
     "static/media/mainPhoto.webp": "/creative-design-agency-react/static/media/mainPhoto.cc376036f5779f47011f.webp",
@@ -13,10 +13,10 @@
     "static/media/testimonialsPerson.png": "/creative-design-agency-react/static/media/testimonialsPerson.5d7e099d0bf15c14aab4.png",
     "index.html": "/creative-design-agency-react/index.html",
     "main.1d775016.css.map": "/creative-design-agency-react/static/css/main.1d775016.css.map",
-    "main.b64f759a.js.map": "/creative-design-agency-react/static/js/main.b64f759a.js.map"
+    "main.5828d35c.js.map": "/creative-design-agency-react/static/js/main.5828d35c.js.map"
   },
   "entrypoints": [
     "static/css/main.1d775016.css",
-    "static/js/main.b64f759a.js"
+    "static/js/main.5828d35c.js"
   ]
 }
