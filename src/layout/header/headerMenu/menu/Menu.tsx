@@ -6,12 +6,12 @@ interface MenuItem {
     href: string;
 }
 
-export const Menu: React.FC<{ menuItems: MenuItem[] }> = (props: { menuItems: MenuItem[] }) => {
+export const Menu = (props: { menuItems: MenuItem[] } , menuIsOpen:any, ) => {
     return (
         <ul>
             {props.menuItems.map((item, index) => {
                 return <S.ListItem key={index}>
-                    <S.NavLink spy={true} smooth={true} to={item.href}>{item.title}</S.NavLink>
+                    <S.NavLink isOpen={menuIsOpen} spy={true} smooth={true} to={item.href}>{item.title}</S.NavLink>
                 </S.ListItem>
             })}
         </ul>

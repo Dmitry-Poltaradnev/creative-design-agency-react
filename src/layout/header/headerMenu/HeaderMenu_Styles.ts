@@ -15,7 +15,7 @@ const DesktopMenu = styled.nav`
 const ListItem = styled.li`
     
 `
-const NavLink = styled(Link)`
+const NavLink = styled(Link)<{ isOpen: boolean }>`
     font-size: 21px;
     font-weight: 400;
     line-height: 32px;
@@ -26,26 +26,31 @@ const NavLink = styled(Link)`
     }
 `
 const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
-    position: fixed;
     background-color: ${theme.colors.primaryBg};
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: fixed;
+    height: 100vh;
     top: 0;
-    z-index: 1000;
-    display: none;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 1s ease;
 
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `}
     ul {
         display: flex;
         gap: 40px;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
+
+    ${props => props.isOpen && css<{ isOpen: boolean }>`       
+        transform: translateY(0);
+    `}
 `
 const MobileMenu = styled.nav<MenuPropsType>`
     a {
@@ -68,6 +73,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         position: absolute;
         left: 40px;
         bottom: 50px;
+        transition: .3s all;
+        
 
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(255, 255, 255, 0);
@@ -79,7 +86,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             height: 2px;
             background-color: ${theme.colors.font};
             transform: translateY(-10px);
-
+            transition: .3s all;
+            
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(-45deg) translateY(1px) translateX(-1px);
             `}
@@ -92,6 +100,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
             height: 2px;
             background-color: ${theme.colors.font};
             transform: translateY(10px);
+            transition: .3s all;
 
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(45deg) translateY(0);

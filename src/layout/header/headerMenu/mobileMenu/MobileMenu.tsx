@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {Menu} from "../menu/Menu";
 import {S} from '../HeaderMenu_Styles'
 
 interface MenuItem {
@@ -7,7 +6,7 @@ interface MenuItem {
     href: string;
 }
 
-export const MobileMenu: React.FC<{ menuItems: MenuItem[] }> = (props: { menuItems: MenuItem[] }) => {
+export const MobileMenu = (props: { menuItems: MenuItem[] }) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)
@@ -19,9 +18,16 @@ export const MobileMenu: React.FC<{ menuItems: MenuItem[] }> = (props: { menuIte
             </S.BurgerButton>
             <S.MobileMenuPopUp isOpen={menuIsOpen} onClick={() => {
                 setMenuIsOpen(false)
-
             }}>
-                <Menu menuItems={props.menuItems}/>
+                <ul>
+                    {props.menuItems.map((item, index) => {
+                        return <S.ListItem key={index}>
+                            <S.NavLink isOpen={menuIsOpen} onClick={() => (setMenuIsOpen(false))} spy={true}
+                                       smooth={true}
+                                       to={item.href}>{item.title}</S.NavLink>
+                        </S.ListItem>
+                    })}
+                </ul>
             </S.MobileMenuPopUp>
         </S.MobileMenu>
     );
