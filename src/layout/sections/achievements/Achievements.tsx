@@ -20,7 +20,7 @@ const AchievemenData = [
         counter: '200+',
         title: 'Project done'
     }, {
-        iconId: 'achievements3',
+        iconId: 'achievements1',
         viewBox: '0 0 90 110',
         width: '105',
         height: '110',
